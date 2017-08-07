@@ -9,9 +9,7 @@ export default DS.Model.extend({
   books: DS.hasMany('book', {inverse: 'author', async: true}),
 
   isNotValid: Ember.computed.empty('name'),
-
-  isNotValid : Ember.computed.empty('name'),
-
+  
   randomize() {
     this.set('name', Faker.name.findName());
     return this;
